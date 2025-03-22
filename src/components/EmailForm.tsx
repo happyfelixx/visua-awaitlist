@@ -4,6 +4,7 @@ import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { toast } from 'sonner';
 import { Mail } from 'lucide-react';
+import { saveEmail } from '@/utils/emailStorage';
 
 const EmailForm: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -18,6 +19,9 @@ const EmailForm: React.FC = () => {
     }
     
     setIsLoading(true);
+    
+    // Save email to storage
+    saveEmail(email);
     
     // Simulate API call
     setTimeout(() => {
