@@ -46,6 +46,7 @@ const EmailForm: React.FC = () => {
           onChange={(e) => setEmail(e.target.value)}
           className="border-0 bg-transparent shadow-none focus-visible:ring-0 outline-none text-white w-full pl-2"
           disabled={isLoading || isSubmitted}
+          style={{ WebkitAppearance: 'none', appearance: 'none' }}
         />
         <Button 
           type="submit" 
